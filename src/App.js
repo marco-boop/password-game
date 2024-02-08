@@ -31,6 +31,14 @@ const App = () => {
                 } else {
                     updatedReqs.push("Your password has upper and lowercase letters");
                     setErrorMessage("");
+                    if (!value.toLowerCase().includes("sutton")) {
+                        shouldError = true;
+                        setErrorMessage("Your password must contain the name of the housewife who said: Name 'em");
+                    }
+                    else {
+                        updatedReqs.push("Your password includes the correct RHOBH housewife name");
+                        setErrorMessage("");
+                    }
                 }
             }
         }
@@ -38,7 +46,7 @@ const App = () => {
         setError(shouldError);
         setReqs(updatedReqs);
 
-        if (!shouldError && updatedReqs.length === 3) {
+        if (!shouldError && updatedReqs.length === 4) {
             setWin(true);
         } else {
             setWin(false);
