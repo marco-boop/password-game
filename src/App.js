@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./index.css"
+import { Analytics } from '@vercel/analytics/react';
 
 const App = () => {
     const [input, setInput] = useState("");
@@ -46,6 +47,7 @@ const App = () => {
 
     return (
         <div className="bg-teal-100 h-full p-20">
+            <Analytics />
             <div className="flex justify-center items-center">
                 <h1 className="text-5xl font-bold pb-10">The Password Game</h1>
             </div>
