@@ -29,7 +29,7 @@ const App = () => {
                     shouldError = true;
                     setErrorMessage("Your password must contain upper and lowercase letters");
                 } else {
-                    updatedReqs.push("Your passwordh as upper and lowercase letters");
+                    updatedReqs.push("Your password has upper and lowercase letters");
                     setErrorMessage("");
                 }
             }
