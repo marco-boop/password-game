@@ -46,13 +46,13 @@ const App = () => {
     }
 
     return (
-        <div className="bg-teal-100 h-full p-20">
+        <div className="p-20 portrait:p-5">
             <Analytics />
             <div className="flex justify-center items-center">
-                <h1 className="text-5xl font-bold pb-10">The Password Game</h1>
+                <h1 className="text-5xl font-bold pb-10 portrait:pb-5 md:text-5xl md:pb-10 lg:text-5xl lg:pb-10 portrait:text-2xl">The Password Game</h1>
             </div>
             <div className="flex flex-col justify-center items-center">
-                <p className="my-5">Please choose a password:</p>
+                <p className="my-5 portrait:my-2">Please choose a password:</p>
                 <input
                     className={`border border-gray-400 rounded p-2 text-gray-900 w-full text-center`}
                     type="text"
@@ -63,18 +63,18 @@ const App = () => {
                     }}
 
                 />
-                {error && <div className="bg-red-200 p-5 shadow-2xl my-10 rounded-lg w-full flex items-center">
-                    <span class="relative flex h-3 w-3">
-                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-                        <span class="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
+                {error && <div className="bg-red-200 p-5 portrait:p-2 shadow-2xl my-10 portrait:my-4 rounded-lg w-full flex items-center">
+                    <span className="relative flex h-3 w-3">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
                     </span>
                     <p className="ml-3">{errorMessage}</p>
                 </div>}
 
-                {win && <div className="bg-green-200 p-5 shadow-2xl my-10 rounded-lg w-full flex items-center">
-                    <span class="relative flex h-3 w-3">
-                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                        <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                {win && <div className="bg-green-200 p-5 portrait:p-2 shadow-2xl my-10 rounded-lg w-full flex items-center">
+                    <span className="relative flex h-3 w-3">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
                     </span>
                     <p className="ml-3">You win! So safe!</p>
                 </div>}
